@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.hamburger {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.ham_top,
+.ham_middle,
+.ham_bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: hsl(0, 0%, 5.9%);
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.ham_middle {
+  transform: translateY(7px);
+}
+
+.ham_bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .ham_top {
+     transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .ham_middle {
+    display: none;
+}
+
+.open .ham_bottom {
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
