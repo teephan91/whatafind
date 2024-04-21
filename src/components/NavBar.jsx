@@ -1,16 +1,16 @@
+import { useState } from 'react';
 import { FaHeart } from 'react-icons/fa';
 import logo from '../img/logo.svg';
-
-const menuBtn = document.getElementById('menu_btn');
-const menu = document.getElementById('menu');
-
-menuBtn.addEventListener('click', () => {
-  menuBtn.classList.toggle('open');
-  menu.classList.toggle('flex');
-  menu.classList.toggle('hidden');
-});
+import HamburgerMenuBtn from './HamburgerMenuBtn';
+import MobileMenu from './MobileMenu';
 
 export default function NavBar() {
+  const [isActive, setIsActive] = useState(false);
+
+   function handleClick() {
+     setIsActive((isActive) => !isActive);
+   }
+
   return (
     <>
       <nav className="relative flex flex-row justify-between items-center px-10 bg-grey">
@@ -36,27 +36,12 @@ export default function NavBar() {
           <FaHeart className="text-red-500 text-2xl cursor-pointer" />
         </a>
         {/* Hamburger Icon */}
-        <button id="menu_btn" className="hamburger md:hidden">
-          <span className="ham_top" />
-          <span className="ham_middle" />
-          <span className="ham_bottom" />
-        </button>
+        <HamburgerMenuBtn isActive={isActive} handleClick={handleClick} />
+        {/* Hamburger Menu */}
       </nav>
-      {/* Hamburger Menu */}
-      <div
-        id="menu"
-        className="absolute hidden flex-col items-end right-10 top-12 bg-white drop-shadow-md rounded-lg p-5 text-black font-semibold text-xl cursor-pointer"
-      >
-        <a href="#" className="hover:text-tan">
-          Find
-        </a>
-        <a href="#" className="hover:text-tan">
-          About
-        </a>
-        <a href="#" className="hover:text-tan">
-          Account & Favorites
-        </a>
-      </div>
+      
+      {/* Mobile Menu */}
+      <MobileMenu isActive={isActive}/>
     </>
   );
 }
