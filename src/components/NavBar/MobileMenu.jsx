@@ -1,5 +1,5 @@
 export default function MobileMenu({isActive}) {
-  const toggleMobileMenu = isActive ? 'hidden' : 'flex';
+  const toggleMobileMenu = !isActive ? 'hidden' : 'flex';
   return (
     <div
           id="menu"

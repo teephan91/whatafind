@@ -1,5 +1,5 @@
 export default function HamburgerMenuBtn({ isActive, handleClick }) {
-  const toggleBtnClass = isActive ? '' : 'open';
+  const toggleBtnClass = isActive ? 'open' : '';
 
   return (
     <button

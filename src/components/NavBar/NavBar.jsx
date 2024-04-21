@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { FaHeart } from 'react-icons/fa';
-import logo from '../img/logo.svg';
+import logo from '../../img/logo.svg';
 import HamburgerMenuBtn from './HamburgerMenuBtn';
 import MobileMenu from './MobileMenu';
 
 export default function NavBar() {
   const [isActive, setIsActive] = useState(false);
 
-   function handleClick() {
-     setIsActive((isActive) => !isActive);
-   }
+  function handleClick() {
+    setIsActive((isActive) => !isActive);
+  }
 
   return (
     <>
@@ -39,9 +39,9 @@ export default function NavBar() {
         <HamburgerMenuBtn isActive={isActive} handleClick={handleClick} />
         {/* Hamburger Menu */}
       </nav>
-      
+
       {/* Mobile Menu */}
-      <MobileMenu isActive={isActive}/>
+      <MobileMenu isActive={isActive} />
     </>
   );
 }
