@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  overflow-y: hidden;
+  background-image:url(img/background.svg);
+  background-size: cover;
+  background-position: center;
+}
 
 .hamburger {
   cursor: pointer;
