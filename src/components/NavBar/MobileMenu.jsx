@@ -3,7 +3,7 @@ export default function MobileMenu({isActive}) {
   return (
     <div
           id="menu"
-          className={`absolute flex-col items-end right-10 top-12 bg-white drop-shadow-md rounded-lg p-5 text-black font-semibold text-xl cursor-pointer ${toggleMobileMenu}`}
+          className={`absolute flex-col items-end right-10 top-12 bg-grey drop-shadow-md rounded-lg p-5 text-black font-semibold text-xl cursor-pointer ${toggleMobileMenu}`}
     >
       <a href="#" className="hover:text-tan">
         Find
