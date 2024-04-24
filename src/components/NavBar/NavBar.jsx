@@ -13,7 +13,7 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className="relative flex flex-row justify-between items-center px-10 bg-grey">
+      <nav className="relative flex flex-row justify-between items-center px-10 bg-black">
         {/* Left Section */}
         <div className="flex space-x-10 items-center">
           {/* Logo */}
@@ -21,7 +21,7 @@ export default function NavBar() {
             <img src={logo} alt="Main Logo" />
           </a>
           {/* Two Navigations */}
-          <div className="hidden md:block space-x-10 text-black font-semibold text-xl cursor-pointer">
+          <div className="hidden md:block space-x-10 text-grey font-semibold text-xl cursor-pointer">
             <a href="#" className="hover:text-tan">
               Find
             </a>
